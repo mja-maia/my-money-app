@@ -13,6 +13,8 @@ import { selectTab, showTabs} from '../common/tab/tabAction'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
+import List from './billingCycleList'
+
 class BillingCycle extends Component {
 
     componentWillMount(){
@@ -21,8 +23,7 @@ class BillingCycle extends Component {
     }
 
 	render() {
-		return (
-			<div>
+		return <div>
 				<ContentHeader title="Ciclos de pagamentos" small="Cadastro" />
 				<Content>
 					<Tabs>
@@ -34,7 +35,7 @@ class BillingCycle extends Component {
 						</TabsHeader>
 						<TabsContent>
 							<TabContent id="tabList">
-								<h1>Lista</h1>
+								<List />
 							</TabContent>
 
 							<TabContent id="tabCreate">
@@ -51,8 +52,7 @@ class BillingCycle extends Component {
 						</TabsContent>
 					</Tabs>
 				</Content>
-			</div>
-		);
+			</div>;
 	}
 }
 
