@@ -45,7 +45,7 @@ class BillingCycle extends Component {
 							</TabContent>
 
 							<TabContent id="tabUpdate">
-								<h1>Alterar</h1>
+								<Form/>
 							</TabContent>
 
 							<TabContent id="tabDelete">
