@@ -8,7 +8,7 @@ class BillingCycleForm extends Component {
         return <div>
 						<form role="form" onSubmit={ handleSubmit }>
 							<div className="box-body">
-								<Field name="nome" component="input" />
+								<Field name="name" component="input" />
 								<Field name="month" component="input" />
 								<Field name="year" component="input" />
 							</div>
