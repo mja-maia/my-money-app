@@ -25,6 +25,10 @@ export function update(values){
     return submit(values,'put')
 }
 
+export function remove(values){
+    return submit(values,'delete')
+}
+
 function submit(values, method){
     return dispatch => {
         const id = values._id ? values._id : ''
@@ -48,6 +52,24 @@ export function showUpdate(billingCycle){
         initialize('billingCycleForm', billingCycle)
     ]
 }
+
+export function showDelete(billingCycle) {
+    return [
+        showTabs('tabDelete'),
+        selectTab('tabDelete'),
+        initialize('billingCycleForm', billingCycle)
+    ]
+}
+
+//codigo refatorado para nao precisar ficar duplicando function de visualizacao de tabs
+
+// export function showTab(billingCycle, tabName){
+//     return [
+//         showTabs(tabName),
+//         selectTab(tabName),
+//         initialize('billingCycleForm', billingCycle)
+//     ]
+// }
 
 export function init(){
     return [
